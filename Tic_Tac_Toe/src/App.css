@@ -1,0 +1,43 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures a fixed 3x3 grid */
+  gap: 8px;
+  width: 264px; /* Fixed width: 3 squares + gaps */
+  height: 264px; /* Fixed height */
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid #646cff;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #1a1a1a;
+  cursor: pointer;
+ 
+  box-sizing: border-box;
+  user-select: none; /* Prevents accidental text selection */
+}
+
+.square:focus {
+  outline: none;
+  box-shadow: none; /* Prevents shifting due to focus */
+}
